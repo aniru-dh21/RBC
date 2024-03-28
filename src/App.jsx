@@ -1,11 +1,13 @@
-function App() {
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Home from "./Home";
+
+export default function App() {
   return (
-    <>
-      <h1 className="text-3xl text-center text-red-700">
-        Welcome to Vite with TailwindCSS and React
-      </h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Navigate replace to="home" />} />
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
