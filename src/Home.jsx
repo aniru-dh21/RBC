@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Breadcrumb from "./Breadcrumb";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
           My Breadcrumb Component 🍞
         </h1>
         <Breadcrumb />
+        <Outlet />
       </div>
     </div>
   );
